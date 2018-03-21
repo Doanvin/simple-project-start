@@ -1,6 +1,6 @@
 {
   "name": "simple-project-start",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A starting point for a simple project with gulp workflow for SCSS, ES6 (no webpack), and HTML. Includes a responsive navbar and flexbox grid. Starting files for a responsive, frontend project.",
   "main": "index.js",
   "scripts": {
