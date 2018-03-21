@@ -74,7 +74,9 @@ gulp.task('font', function() {
 
 // Delete Task delets the dist folder
 gulp.task('delete', function() {
-    del(['dist/assets/js/*.js', 'dist/assets/css/*.css'], { dryRun: true }).then(paths => {
+    del(['dist/assets/js/**/*.js',
+         'dist/assets/css/*.css',
+         'dist/**/*.html'], { dryRun: true }).then(paths => {
         console.log('Files and folders that would be deleted:\n', paths.join('\n'));
     });
 });
