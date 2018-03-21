@@ -1,0 +1,28 @@
+main {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1200px;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+article,
+aside {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  aside {
+    flex: 2.5; // 25% of its container
+    padding-left: 20px;
+  }
+
+  article {
+    flex: 7.5; //75% of its container
+    padding-right: 20px;
+  }
+}

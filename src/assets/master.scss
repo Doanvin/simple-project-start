@@ -1,0 +1,13 @@
+// IMPORT NORMALIZE CSS AND NORMALIZE BORDER-BOX
+@import "./scss/normalize";
+@import "./scss/border-box-normalize";
+
+// IMPORT GRID
+@import "./scss/semantic-grid";
+@import "./scss/grid";
+
+// IMPORT BASE COMPONENTS | CUSTOM COMPONENTS SHOULD BE LINKED IN HTML
+@import "./components/navbar/navbar";
+
+// OVERRIDE DEFAULT STYLES 
+@import "./variable-settings";

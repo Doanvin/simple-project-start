@@ -1,0 +1,79 @@
+$class-slug: is !default; // .is-3 with .is-9 etc
+$grid-columns: 12 !default; // number of columns to use in the grid
+$small-screen: 800px !default; // width for small screen modifyer .is-5--sm
+$small-screen-max: 799px !default; // no calc use b/c lack of Edge support for media queries
+$container-pad-horizontal: 10px !default; // left & right padding on .container
+
+
+// GRID STRUCTURE EXAMPLE ========================
+// .container
+//   .row
+//     .col .is-4
+//     .col .is-8
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 $container-pad-horizontal;
+}
+
+.row:before,
+.row:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+@for $i from 1 through $grid-columns {
+  .#{$class-slug}-#{$i} {
+    width: 100%;
+  }
+}
+
+
+
+
+// SMALL SCREENS ONLY ============================
+@media only screen and (max-width: $small-screen-max) {
+  // Override 100% default width .is-2-3--sm | .is-1-3--sm | etc
+  @for $i from 1 through 3 {
+    .#{$class-slug}-#{$i}-#{3}--sm {
+      width: calc(100% / 3 * #{$i});
+    }
+  }
+
+  // Override 100% default width .is-2-5--sm | .is-3-5--sm | etc
+  @for $i from 1 through 5 {
+    .#{$class-slug}-#{$i}-#{5}--sm {
+      width: calc(100% / 5 * #{$i});
+    }
+  }
+}
+
+
+// LARGE SCREENS ONLY ============================
+@media only screen and (min-width: $small-screen) {
+  // generate class names for each grid column
+  @for $i from 1 through $grid-columns {
+    .#{$class-slug}-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+
+  // generate class names for grid columns in thirds
+  @for $i from 1 through 3 {
+    .#{$class-slug}-#{$i}-#{3} {
+      width: calc(100% / 3 * #{$i});
+    }
+  }
+
+  // generate class names for grid columns in fifths
+  @for $i from 1 through 5 {
+    .#{$class-slug}-#{$i}-#{5} {
+      width: calc(100% / 5 * #{$i});
+    }
+  }
+
+  .col {
+    float: left;
+  }
+}

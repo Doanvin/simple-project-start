@@ -1,0 +1,40 @@
+{
+  "name": "simple-project-start",
+  "version": "0.1.0",
+  "description": "A starting point for a simple project with gulp workflow for SCSS, ES6 (no webpack), and HTML. Includes a responsive navbar and flexbox grid. Starting files for a responsive, frontend project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doanvin/simple-project-start.git"
+  },
+  "author": "@Doanvin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Doanvin/simple-project-start/issues"
+  },
+  "homepage": "https://github.com/Doanvin/simple-project-start#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "eslint": "^4.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-cache": "^0.4.6",
+    "gulp-clean-css": "^3.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^2.1.2",
+    "sass-lint": "^1.10.2"
+  }
+}
