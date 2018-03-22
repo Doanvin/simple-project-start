@@ -1,9 +1,12 @@
-// HEIGHT, WIDTH, BREAKPOINTS ==================================
-$navbar-breakpoint-max: 1024px !default;       // used for max-width media query
-$navbar-breakpoint-min: 1023px !default;       // used for min-width media query
-$navbar-min-height: 3.25rem !default;          // minimum height for navbar small & large
-$navbar-burger-height-width: 3.25rem !default; // navbar burger size
-$navbar-img-max-height: 1.75rem !default;      // maximum height for imgs in navbar
+// HEIGHT, WIDTH, BREAKPOINTS, FONT ============================
+$navbar-breakpoint-max: 1024px !default;          // used for max-width media query
+$navbar-breakpoint-min: 1023px !default;          // used for min-width media query
+$navbar-min-height: 3.25rem !default;             // minimum height for navbar small & large
+$navbar-burger-height-width: 3.25rem !default;    // navbar burger size
+$navbar-img-max-height: 1.75rem !default;         // maximum height for imgs in navbar
+$navbar-font-size: .875rem !default;              // navbar font-size
+$navbar-large-screen-font-size: .875rem !default; // navbar font-size for large screens
+$navbar-font-family: 'Montserrat', sans-serif !default;     // navbar font-family
 
 // COLORS ======================================================
 $nc: #000 !default;    // navbar text color
@@ -27,6 +30,7 @@ $nbc-divider: #dbdbdb !default;                  // .navbar-dropdown hr divider 
 .navbar {
   background-color: $nbc;
   color: $nc;
+  font-family: $navbar-font-family;
   min-height: $navbar-min-height;
   position: relative;
 
